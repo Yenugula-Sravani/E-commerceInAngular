@@ -12,6 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from  '@angular/common/http';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from  '@angular/common/http';
     CartComponent,
     OrdersComponent,
     NavbarComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,
