@@ -18,7 +18,12 @@ export class CartComponent implements OnInit{
   checkOut(){
     this.cartService.checkOut();
   }
+//retuning subtotal
+  OrderTotal():number{
+    return this.cartService.getTotalValue();
+  }
 
-  total:number=this.cartService.returnTotal();
-
+  getCount(): number {
+    return this.cartService.getCartCount();
+  }
 }

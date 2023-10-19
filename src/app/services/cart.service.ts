@@ -64,10 +64,12 @@ export class CartService {
     localStorage.removeItem('cart');
   }
 
-  returnTotal(): number {
-    for (let c of this.cart) {
-      this.total += this.total + c.count! * c.price;
-    }
-    return this.total;
+  //geting total value on cart page
+
+  getTotalValue(): number {
+    this.cart = JSON.parse(localStorage.getItem('cart')!);
+    let totalPrice = this.cart.map((val) => val.price * val.count!);
+    this.total = totalPrice.reduce((sum, curr) => sum + curr, 0);
+    return Math.floor(this.total);
   }
 }
